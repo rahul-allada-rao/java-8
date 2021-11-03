@@ -1,4 +1,4 @@
-package main.java.java8;
+package main.java.java8.dish;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,14 +18,13 @@ public class AppleMain {
 
     // filter heavy apples
     System.out.println("Filter only those apples which weigh more than 150");
-    List<Apple> heavyApples = filter(inventory, (Apple apple) -> apple.weight()>150);
+    List<Apple> heavyApples = filter(inventory, (Apple apple) -> apple.weight() > 150);
     heavyApples.forEach(apple -> System.out.println(apple.color() + "\t" + apple.weight()));
 
     // filter red apples only
     System.out.println("Filter only Red colored apples");
     List<Apple> redApples = filter(inventory, (Apple apple) -> "Red".equals(apple.color()));
     redApples.forEach(apple -> System.out.println(apple.color() + "\t" + apple.weight()));
-
 
 
     inventory.sort((Apple a1, Apple a2) -> a1.weight().compareTo(a2.weight())); // explicit variable types
@@ -54,15 +53,14 @@ public class AppleMain {
     Predicate<Apple> redHeavyOrGreenApplePredicate = redApplePredicate.and(heavyApplePredicate).or(greenApplePredicate);
 
 
-
   }
 
-  private static <T> List<T> filter(List<T> list, Predicate<T> p){
+  private static <T> List<T> filter(List<T> list, Predicate<T> p) {
     List<T> result = new ArrayList<>();
-    for (T element : list){
-        if (p.test(element)){
-          result.add(element);
-        }
+    for (T element : list) {
+      if (p.test(element)) {
+        result.add(element);
+      }
     }
     return result;
   }

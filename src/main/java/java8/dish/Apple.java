@@ -1,4 +1,4 @@
-package main.java.java8;
+package main.java.java8.dish;
 
 public class Apple {
 
@@ -10,11 +10,11 @@ public class Apple {
     this.weight = weight;
   }
 
-  public String color(){
+  public String color() {
     return color;
   }
 
-  public Integer weight(){
+  public Integer weight() {
     return weight;
   }
 }
