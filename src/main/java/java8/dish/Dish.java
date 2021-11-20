@@ -38,5 +38,6 @@ public class Dish {
     return name;
   }
 
-  public enum Type {MEAT, FISH, VEG, KETO}
+  public enum Type {MEAT, SEA_FOOD, VEG, KETO}
+  public enum CaloricLevel { DIET, NORMAL, FAT }
 }

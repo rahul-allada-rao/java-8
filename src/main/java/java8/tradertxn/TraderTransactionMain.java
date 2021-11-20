@@ -1,9 +1,6 @@
 package main.java.java8.tradertxn;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class TraderTransactionMain {
@@ -91,5 +88,11 @@ public class TraderTransactionMain {
             .map(Transaction::getValue)
             .reduce(Integer::min);
     System.out.println("Min transaction value : " + min.get());
+    
+    // 9. Group txn by year
+    System.out.println("Group transactions by year!");
+    Map<Integer, List<Transaction>> txnByYear = transactions.stream().collect(Collectors.groupingBy(Transaction::getYear));
+
+
   }
 }

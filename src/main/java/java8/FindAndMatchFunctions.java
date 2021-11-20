@@ -18,8 +18,8 @@ public class FindAndMatchFunctions {
             new Dish("rice", true, 350, Dish.Type.VEG),
             new Dish("season fruit", true, 120, Dish.Type.VEG),
             new Dish("pizza", true, 550, Dish.Type.VEG),
-            new Dish("prawns", false, 300, Dish.Type.FISH),
-            new Dish("salmon", false, 450, Dish.Type.FISH));
+            new Dish("prawns", false, 300, Dish.Type.SEA_FOOD),
+            new Dish("salmon", false, 450, Dish.Type.SEA_FOOD));
 
     // allMatch, anyMatch, noneMatch --> these return a boolean type --> these are terminal operations in stream.
     vegDishPresent(menu);
